@@ -1,0 +1,80 @@
+/* Estilos gerais da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo da galeria (onde ficam as 3 fotos pequenas) */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover; /* Faz a imagem não ficar esticada/deformada */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Efeito de zoom ao passar o mouse por cima das fotos menores */
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* -------------------------------------- */
+/* ESTILO DAS IMAGENS EXPANDIDAS (MODAL)  */
+/* -------------------------------------- */
+
+.modal {
+    display: none; /* Mantém as imagens grandes escondidas por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* O "segredo": quando você clica num link, o ID vira o "target". 
+   Isso faz a tela preta com a imagem aparecer! */
+.modal:target {
+    display: flex;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Botão de fechar (o "X") */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+/* Muda a cor do X quando passa o mouse */
+.close-btn:hover {
+    color: #ff4c4c;
+}
