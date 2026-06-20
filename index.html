@@ -11,25 +11,17 @@
     <p>Clique nas imagens para expandir!</p>
 
     <div class="gallery">
-        <a href="#cachorro-quente"><img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=400" alt="Cachorro Quente"></a>
-        <a href="#pizza"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza"></a>
-        <a href="#bolo"><img src="https://images.unsplash.com/photo-1578985545062-69928b1ea9c2?w=400" alt="Bolo"></a>
+        <img class="img-galeria" src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=400" alt="Cachorro Quente Delicioso">
+        <img class="img-galeria" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza de Pepperoni">
+        <img class="img-galeria" src="https://images.unsplash.com/photo-1578985545062-69928b1ea9c2?w=400" alt="Bolo de Festa">
     </div>
 
-    <div id="cachorro-quente" class="modal">
-        <a href="#" class="close-btn">&times;</a>
-        <img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=800" alt="Cachorro Quente Expandido">
+    <div id="meuModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="imgExpandida">
+        <div id="legenda"></div>
     </div>
 
-    <div id="pizza" class="modal">
-        <a href="#" class="close-btn">&times;</a>
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800" alt="Pizza Expandida">
-    </div>
-
-    <div id="bolo" class="modal">
-        <a href="#" class="close-btn">&times;</a>
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1ea9c2?w=800" alt="Bolo Expandido">
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
